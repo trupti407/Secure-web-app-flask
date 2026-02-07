@@ -1,0 +1,43 @@
+:root{
+  --bg1: #ff9a9e;
+  --bg2: #fad0c4;
+  --card-bg: linear-gradient(135deg, #ffffffcc 0%, #f7f8fccc 100%);
+  --accent: #6a11cb;
+  --accent-2: #2575fc;
+  --muted: #6b7280;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Helvetica,Arial}
+body{background:linear-gradient(120deg,var(--bg1),var(--bg2));min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+
+.card-custom{width:100%;max-width:520px;border-radius:14px;background:var(--card-bg);box-shadow:0 12px 30px rgba(0,0,0,0.12);overflow:hidden}
+.card-header{padding:26px 28px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff}
+.card-header h3{margin:0;font-weight:600}
+.card-header .muted-link{color:rgba(255,255,255,0.92);font-size:0.95rem;margin-top:6px;opacity:0.95}
+.card-body{padding:28px}
+
+/* Auth link group styles */
+.auth-links{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:8px}
+.auth-links .btn-register{border-radius:999px;padding:8px 20px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;box-shadow:0 8px 24px rgba(37,117,252,0.12)}
+.auth-links .btn-register:hover{transform:translateY(-1px);filter:brightness(.98)}
+.auth-links .btn-forgot{color:var(--muted);text-decoration:none;font-weight:600}
+.auth-links .btn-forgot:hover{text-decoration:underline}
+
+
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border-radius:10px;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;font-weight:700}
+
+form .form-control{border-radius:10px;padding:10px 12px;border:1px solid #e6e9ef}
+.form-label{font-size:13px;color:var(--muted);margin-bottom:6px}
+
+.btn-primary-custom{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#fff;padding:10px 14px;border-radius:10px;font-weight:600}
+.btn-primary-custom:hover{filter:brightness(.96);transform:translateY(-1px)}
+
+.muted-link{color:var(--muted);font-size:13px}
+.muted-link a{color:var(--accent-2);text-decoration:none}
+
+.flash-success{background:#e6fffa;border-left:4px solid #00b37e;color:#064e3b;padding:10px;border-radius:8px;margin-bottom:12px}
+.flash-error{background:#fff1f2;border-left:4px solid #ef4444;color:#7f1d1d;padding:10px;border-radius:8px;margin-bottom:12px}
+
+@media (max-width:480px){.card-custom{margin:12px}}
+
