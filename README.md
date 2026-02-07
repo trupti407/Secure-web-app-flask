@@ -8,7 +8,7 @@ This project focuses on building a secure authentication system while protecting
 
 ---
 
-## 🎯 Project Objectives
+# 🎯 Project Objectives
 
 - Build a secure web application using Flask
 - Implement authentication and session management securely
@@ -18,26 +18,26 @@ This project focuses on building a secure authentication system while protecting
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 👤 Authentication & Authorization
+# 👤 Authentication & Authorization
 - Secure user registration
 - Duplicate username/email prevention
 - Login & logout with session protection
 - Dashboard access restricted to authenticated users only
 
-### 🔑 Password Security
+# 🔑 Password Security
 - Password hashing using **PBKDF2 + SHA256 (Werkzeug)**
 - Minimum password length validation
 - Confirm-password validation
 
-### 📧 Secure Password Reset
+# 📧 Secure Password Reset
 - Token-based forgot-password flow
 - Token expiry set to **1 hour**
 - Email delivery via SMTP
 - Development fallback link when SMTP is not configured
 
-### 🛡️ Web Security Controls
+# 🛡️ Web Security Controls
 - CSRF protection using **Flask-WTF**
 - SQL Injection prevention via **parameterized queries**
 - XSS mitigation via input validation & Jinja2 auto-escaping
@@ -85,12 +85,12 @@ This project focuses on building a secure authentication system while protecting
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-**###2️⃣ Install Dependencies**
+**#2️⃣ Install Dependencies**
 powershell
 Copy code
 python -m pip install -r requirements.txt
 
-**###3️⃣ Environment Configuration**
+**#3️⃣ Environment Configuration**
 Create a .env file in the root directory:
 env
 Copy code
@@ -110,7 +110,7 @@ DEV_MODE=True
 ⚠️ Never commit .env to GitHub
 (.gitignore already includes it)
 
-**###4️⃣ Database Setup**
+**#4️⃣ Database Setup**
 Run schema manually:
 powershell
 Copy code
@@ -120,14 +120,14 @@ powershell
 Copy code
 python scripts/add_reset_columns.py
 
-**###5️⃣ Run the Application**
+**#5️⃣ Run the Application**
 powershell
 Copy code
 python app.py
 Open in browser:
 👉 http://localhost:5000
 
-**###🔁 Password Reset Flow**
+**#🔁 Password Reset Flow**
 User clicks Forgot Password
 Enters registered email
 Secure reset token generated
@@ -135,7 +135,7 @@ Reset link sent via email (or shown in dev mode)
 Token expiry validated
 Password updated securely
 
-**###📁 Project Structure**
+**#📁 Project Structure**
 pgsql
 Copy code
 Secure-web-app-flask/
@@ -158,14 +158,14 @@ Secure-web-app-flask/
 └── static/
     └── style.css
 
-**###📸 Application Screenshots**
+**#📸 Application Screenshots**
 🔐 Login Page
 📝 Register Page
 🔑 Forgot Password
 🔁 Password Reset
 📊 User Dashboard
 
-**###🧪 Troubleshooting**
+**#🧪 Troubleshooting**
 reset_token column missing
 → Run scripts/add_reset_columns.py
 
@@ -178,20 +178,20 @@ SMTP not sending mail
 Login loop after logout
 → Sessions are cleared using session.clear()
 
-**###🚀 Future Enhancements**
+**#🚀 Future Enhancements**
 Role-based access control (Admin / User)
 Login rate limiting (Flask-Limiter)
 Email verification on registration
 Two-Factor Authentication (2FA)
 Security audit logging
 
-**###✅ Project Status**
+**#✅ Project Status**
 ✔ Secure authentication implemented
 ✔ Web security threats mitigated
 ✔ Internship requirements fulfilled
 ✔ Ready for GitHub, mentor review & resume
 
-**###👩‍💻 Author**
+**#👩‍💻 Author**
 Trupti Lavate
 Cybersecurity & Python | Flask Developer
 
