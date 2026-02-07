@@ -85,23 +85,20 @@ This project focuses on building a secure authentication system while protecting
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-2️⃣ Install Dependencies
+**###2️⃣ Install Dependencies**
 powershell
 Copy code
 python -m pip install -r requirements.txt
 
-3️⃣ Environment Configuration
-Create a .env file:
-
+**###3️⃣ Environment Configuration**
+Create a .env file in the root directory:
 env
 Copy code
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_password
 DB_NAME=secure_web_app
-
 SECRET_KEY=your_secure_random_key
-
 SMTP_HOST=smtp.example.com
 SMTP_PORT=587
 SMTP_USER=your_email
@@ -113,39 +110,32 @@ DEV_MODE=True
 ⚠️ Never commit .env to GitHub
 (.gitignore already includes it)
 
-4️⃣ Database Setup
+**###4️⃣ Database Setup**
 Run schema manually:
-
 powershell
 Copy code
 mysql -u root -p < database/schema.sql
-Or use helper script:
-
+OR use helper script:
 powershell
 Copy code
 python scripts/add_reset_columns.py
 
-5️⃣ Run the Application
+**###5️⃣ Run the Application**
 powershell
 Copy code
 python app.py
 Open in browser:
 👉 http://localhost:5000
 
-🔁 Password Reset Flow
+**###🔁 Password Reset Flow**
 User clicks Forgot Password
-
 Enters registered email
-
 Secure reset token generated
-
 Reset link sent via email (or shown in dev mode)
-
 Token expiry validated
-
 Password updated securely
 
-📁 Project Structure
+**###📁 Project Structure**
 pgsql
 Copy code
 Secure-web-app-flask/
@@ -168,25 +158,14 @@ Secure-web-app-flask/
 └── static/
     └── style.css
 
-    ## 📸 Application Screenshots
+**###📸 Application Screenshots**
+🔐 Login Page
+📝 Register Page
+🔑 Forgot Password
+🔁 Password Reset
+📊 User Dashboard
 
-### 🔐 Login Page
-![login Page](./screenshots/login.png)
-
-### 📝 Register Page
-![register Page](./screenshots/register.png)
-
-### 🔑 Forgot Password
-![forgot Password](./screenshots/forgot.png)
-
-### 🔁 Password Reset
-![reset Step 1](./screenshots/reset1.png)
-![reset Step 2](./screenshots/reset2.png)
-
-### 📊 User Dashboard
-![dashboard](./screenshots/dashboard.png)
-
-🧪 Troubleshooting
+**###🧪 Troubleshooting**
 reset_token column missing
 → Run scripts/add_reset_columns.py
 
@@ -199,24 +178,20 @@ SMTP not sending mail
 Login loop after logout
 → Sessions are cleared using session.clear()
 
-🚀 Future Enhancements
+**###🚀 Future Enhancements**
 Role-based access control (Admin / User)
-
 Login rate limiting (Flask-Limiter)
-
 Email verification on registration
-
 Two-Factor Authentication (2FA)
-
 Security audit logging
 
-✅ Project Status
+**###✅ Project Status**
 ✔ Secure authentication implemented
 ✔ Web security threats mitigated
 ✔ Internship requirements fulfilled
 ✔ Ready for GitHub, mentor review & resume
 
-👩‍💻 Author
+**###👩‍💻 Author**
 Trupti Lavate
 Cybersecurity & Python | Flask Developer
 
