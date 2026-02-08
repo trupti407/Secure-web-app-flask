@@ -47,7 +47,7 @@ This project focuses on building a secure authentication system while protecting
   - `SameSite=Lax`
 - Session cleared properly on logout
 
-### 🎨 User Interface
+# 🎨 User Interface
 - Bootstrap 5 responsive UI
 - Centered authentication cards
 - Flash messages for user-friendly feedback
@@ -55,7 +55,7 @@ This project focuses on building a secure authentication system while protecting
 
 ---
 
-## 🧠 Threat Model & Protection Mapping
+# 🧠 Threat Model & Protection Mapping
 
 | Threat | Protection Implemented |
 |------|------------------------|
@@ -68,7 +68,7 @@ This project focuses on building a secure authentication system while protecting
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 - **Backend:** Flask (Python)
 - **Database:** MySQL
@@ -78,14 +78,14 @@ This project focuses on building a secure authentication system while protecting
 
 ---
 
-## ⚙️ Setup & Installation (Windows)
+# ⚙️ Setup & Installation (Windows)
 
 ### 1️⃣ Create Virtual Environment
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-**#2️⃣ Install Dependencies**
+**###2️⃣ Install Dependencies**
 powershell
 Copy code
 python -m pip install -r requirements.txt
