@@ -84,6 +84,7 @@ This project focuses on building a secure authentication system while protecting
 #**1️⃣ Create Virtual Environment**
 
 python -m venv .venv
+
 .\.venv\Scripts\Activate.ps1
 
 
