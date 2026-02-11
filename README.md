@@ -82,91 +82,145 @@ This project focuses on building a secure authentication system while protecting
 
 
 #**1️⃣ Create Virtual Environment**
-```powershell
+
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-**# 2️⃣ Install Dependencies**
-powershell
-Copy code
+
+#**2️⃣ Install Dependencies**
+
 python -m pip install -r requirements.txt
 
-**#3️⃣ Environment Configuration**
+
+#**3️⃣ Environment Configuration**
+
 Create a .env file in the root directory:
-env
-Copy code
+
 DB_HOST=localhost
+
 DB_USER=root
+
 DB_PASSWORD=your_password
+
 DB_NAME=secure_web_app
+
 SECRET_KEY=your_secure_random_key
+
 SMTP_HOST=smtp.example.com
+
 SMTP_PORT=587
+
 SMTP_USER=your_email
+
 SMTP_PASSWORD=your_password
+
 SMTP_FROM=your_email
+
 SMTP_USE_TLS=True
 
 DEV_MODE=True
+
+
 ⚠️ Never commit .env to GitHub
 (.gitignore already includes it)
 
-**#4️⃣ Database Setup**
+
+#**4️⃣ Database Setup**
+
 Run schema manually:
-powershell
-Copy code
+
 mysql -u root -p < database/schema.sql
+
+
 OR use helper script:
-powershell
-Copy code
+
 python scripts/add_reset_columns.py
 
-**#5️⃣ Run the Application**
-powershell
-Copy code
+
+#**5️⃣ Run the Application**
+
 python app.py
+
+
 Open in browser:
+
 👉 http://localhost:5000
 
+
 **#🔁 Password Reset Flow**
+
 User clicks Forgot Password
+
 Enters registered email
+
 Secure reset token generated
+
 Reset link sent via email (or shown in dev mode)
+
 Token expiry validated
+
 Password updated securely
 
 **#📁 Project Structure**
+
 pgsql
+
 Copy code
+
 Secure-web-app-flask/
+
 ├── app.py
+
 ├── config.py
+
 ├── .env                 # Not committed
+
 ├── requirements.txt
+
 ├── README.md
+
 ├── SECURITY_DESIGN.md
+
 ├── database/
+
 │   └── schema.sql
+
 ├── templates/
+
 │   ├── login.html
+
 │   ├── register.html
+
 │   ├── forgot.html
+
 │   ├── reset.html
+
 │   ├── dashboard.html
+
 │   └── email/
+
 │       └── reset_password.html
+
 └── static/
+
     └── style.css
+    
 
 **#📸 Application Screenshots**
+
 🔐 Login Page
+
 📝 Register Page
+
 🔑 Forgot Password
+
 🔁 Password Reset
+
 📊 User Dashboard
 
+
 **#🧪 Troubleshooting**
+
 reset_token column missing
 → Run scripts/add_reset_columns.py
 
@@ -180,23 +234,35 @@ Login loop after logout
 → Sessions are cleared using session.clear()
 
 **#🚀 Future Enhancements**
+
 Role-based access control (Admin / User)
+
 Login rate limiting (Flask-Limiter)
+
 Email verification on registration
+
 Two-Factor Authentication (2FA)
+
 Security audit logging
 
+
 **#✅ Project Status**
+
 ✔ Secure authentication implemented
+
 ✔ Web security threats mitigated
+
 ✔ Internship requirements fulfilled
+
 ✔ Ready for GitHub, mentor review & resume
 
+
 **#👩‍💻 Author**
+
 Trupti Lavate
+
 Cybersecurity & Python | Flask Developer
 
-This project was developed as part of the
-Cryptonic Area’s Cyber Security Virtual Internship Program
-to gain hands-on experience in secure web application development.
+
+This project was developed as part of the Cryptonic Area’s Cyber Security Virtual Internship Program to gain hands-on experience in secure web application development.
 
