@@ -219,6 +219,8 @@ screenshots/register.png
 
 🔑 Forgot Password
 
+screenshots/forgot.png
+
 🔁 Password Reset
 
 📊 User Dashboard
