@@ -211,7 +211,11 @@ Secure-web-app-flask/
 
 🔐 Login Page
 
+screenshots/login.png
+
 📝 Register Page
+
+screenshots/register.png
 
 🔑 Forgot Password
 
