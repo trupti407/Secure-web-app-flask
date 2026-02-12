@@ -223,7 +223,12 @@ screenshots/forgot.png
 
 🔁 Password Reset
 
+screenshots/reset1.png
+screenshots/reset2.png
+
 📊 User Dashboard
+
+dashboard.png
 
 
 **#🧪 Troubleshooting**
